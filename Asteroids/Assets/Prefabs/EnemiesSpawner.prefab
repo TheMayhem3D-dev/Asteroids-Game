@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1010708585163229431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1010708585163229424}
+  - component: {fileID: 1010708585163229425}
+  m_Layer: 0
+  m_Name: EnemiesSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1010708585163229424
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010708585163229431}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1010708585163229425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010708585163229431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dd37a41e84b45b4d8abe9cdf3624fa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTransform: {fileID: 1010708585163229424}
+  onSpawnEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1010708585163229425}
+        m_TargetAssemblyTypeName: EnemiesSpawner, Assembly-CSharp
+        m_MethodName: SpawnObjectFromPool
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Enemy
+          m_BoolArgument: 0
+        m_CallState: 2
+  onSpawnObjFromPoolEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  randomPosition:
+    points: {fileID: 11400000, guid: 9326226051574a44193597e4a1c2cd34, type: 2}
+    indexer: 0
+  timeToFirstSpawn: 2
+  startEnemiesCount: 5
+  enemiesLeftToSpawn: 25
+  enemiesSpawnInOneTime: 1
+  timeToNextSpawn: 3
+  timeSubtract: 0.1
+  checkForOtherRadius: 2
+  enemiesLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  OnEnemiesEnd:
+    m_PersistentCalls:
+      m_Calls: []
